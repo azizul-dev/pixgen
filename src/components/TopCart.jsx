@@ -1,5 +1,6 @@
 import { Button, Card, Chip, Separator } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { BiDownload } from "react-icons/bi";
 import { FaHeart } from "react-icons/fa";
@@ -33,7 +34,7 @@ const TopCart = ({ p }) => {
           <p>{p.downloads}</p>
         </div>
       </div>
-      <Button variant=" outline" className={'w-full border'}>View</Button>
+      <Link href={`/all-photo/${p.id}`}><Button variant=" outline" className={'w-full border'}>View</Button></Link>
     </Card>
   );
 };
